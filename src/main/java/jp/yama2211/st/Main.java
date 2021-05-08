@@ -26,7 +26,7 @@ public final class Main extends JavaPlugin {
         loadCmd();
         //アップデートの通知
         if (getConfig().getBoolean("Update")) {
-            new UpdateChecker(this, "HandItemHide").getVersion(version -> {
+            new UpdateChecker(this, "SurvivalTool").getVersion(version -> {
                 if (!this.getDescription().getVersion().equalsIgnoreCase(version)) {
                     getLogger().warning("利用可能なアップデートがあります。配布フォーラムをご確認ください。\nリンク:https://ym21.ml/amc4e");
                 }

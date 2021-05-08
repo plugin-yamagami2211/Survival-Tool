@@ -1,6 +1,5 @@
 package jp.yama2211.st.Cmd;
 
-import jp.yama2211.st.CustomFile;
 import jp.yama2211.st.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
