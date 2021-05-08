@@ -1,0 +1,4 @@
+name: Survival Tool
+version: ${project.version}
+main: jp.yama2211.st.Main
+api-version: 1.16
