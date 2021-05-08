@@ -11,6 +11,8 @@
 #
 Msg:
   Join: "&a&l%player &rがログインしました。"
+  FJoin: "&a&l%player &rが初めてログインしました。"
+  Quit: "&a&l%player &rがログアウトしました。"
 
 home:
   tp: "&6Homeに設定した場所にTPしました。"
