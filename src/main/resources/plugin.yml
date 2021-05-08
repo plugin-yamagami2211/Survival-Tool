@@ -1,4 +1,20 @@
-name: Survival Tool
+name: SurvivalTool
 version: ${project.version}
 main: jp.yama2211.st.Main
 api-version: 1.16
+
+commands:
+  st:
+    description: プラグインのヘルプコマンドです。
+  st.reload:
+    description: configをリロードするコマンドです。
+  home:
+    description: 設定した場所にTPできるコマンドです。
+  home.set:
+    description: 現在の座標を記録します。
+
+permissions:
+  home.use:
+    default: true
+  st.admin:
+    default: op

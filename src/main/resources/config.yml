@@ -1,0 +1,27 @@
+#
+# Survival Tool
+# @author yamagami2211
+#
+
+#
+# ログイン・ログアウトなどのメッセージを変更できます。
+# &でカラーコード
+# %playerでプレイヤーの名前
+# %nで改行ができます。
+#
+Msg:
+  Join: "&a&l%player &rがログインしました。"
+
+home:
+  tp: "&6Homeに設定した場所にTPしました。"
+  set: "&3現在座標をHomenに記録しました。"
+  nottp: "&4Homeが設定されていません。"
+
+plugin:
+  reload: "&aConfigをリロードしました。"
+  notpex: "&4権限がありません。"
+  notgame: "&4ゲーム内から実行してください。"
+
+#
+# homeの設定はhome.ymlに記録されています。
+#
