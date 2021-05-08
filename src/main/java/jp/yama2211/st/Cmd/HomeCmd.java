@@ -21,7 +21,7 @@ public class HomeCmd implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if(!(sender instanceof Player)){
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("plugin.nogame")));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("plugin.notgame")));
             return true;
         } else {
             if(cmd.getName().equalsIgnoreCase("home")){
@@ -50,6 +50,9 @@ public class HomeCmd implements CommandExecutor {
                 }
                 } //args ==0
             } //hasPermission
+                else {
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
+            }
             } //cmd.getName
 
             if (args.length == 1) {
@@ -65,6 +68,8 @@ public class HomeCmd implements CommandExecutor {
                     plugin.home.saveConfig();
 
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("home.set")));
+                } else {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
                 }
             }
 
