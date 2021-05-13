@@ -12,6 +12,8 @@ commands:
     description: 設定した場所にTPできるコマンドです。
   home.set:
     description: 現在の座標を記録します。
+  respawn:
+    description: ベットなどのスポーンポイントにTPします。
 
 permissions:
   home.use:
