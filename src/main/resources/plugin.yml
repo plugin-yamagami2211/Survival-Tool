@@ -18,5 +18,7 @@ commands:
 permissions:
   home.use:
     default: true
+  respawn.use:
+    default: true
   st.admin:
     default: op

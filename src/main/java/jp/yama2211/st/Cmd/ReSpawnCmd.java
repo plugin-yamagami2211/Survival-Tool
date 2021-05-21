@@ -21,6 +21,7 @@ public class ReSpawnCmd implements CommandExecutor {
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("plugin.notgame")));
             return true;
         } else {
+            if(sender.hasPermission("respawn.use")){
             Player player = (Player)sender;
             try{
                 Location ReSpawn = player.getBedSpawnLocation();
@@ -29,6 +30,7 @@ public class ReSpawnCmd implements CommandExecutor {
             }catch (Exception err){
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("ReSpawn.notp")));
             }
+        }
         }
 
         return false;
