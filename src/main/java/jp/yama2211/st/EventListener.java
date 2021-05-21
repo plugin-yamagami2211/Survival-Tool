@@ -2,8 +2,10 @@ package jp.yama2211.st;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
@@ -37,6 +39,18 @@ public class EventListener implements Listener {
         Quit = Quit.replaceAll("%n","\n");
         event.setQuitMessage(null);
         Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&',Quit));
+    }
+
+    @EventHandler
+    public void onDeath(PlayerDeathEvent event){
+        Player player = event.getEntity().getPlayer();
+        String PlayerId = "DeathPoint." + player.getUniqueId().toString();
+        plugin.deathP.getConfig().set(PlayerId + ".X", player.getLocation().getBlockX());
+        plugin.deathP.getConfig().set(PlayerId + ".Y", player.getLocation().getBlockY());
+        plugin.deathP.getConfig().set(PlayerId + ".Z", player.getLocation().getBlockZ());
+        plugin.deathP.getConfig().set(PlayerId + ".Yaw", player.getLocation().getYaw());
+        plugin.deathP.getConfig().set(PlayerId + ".Pitch", player.getLocation().getPitch());
+        plugin.deathP.getConfig().set(PlayerId + ".World", player.getLocation().getWorld().getName());
     }
 
 }

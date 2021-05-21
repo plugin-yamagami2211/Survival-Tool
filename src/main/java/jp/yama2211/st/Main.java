@@ -1,14 +1,17 @@
 package jp.yama2211.st;
 
+import jp.yama2211.st.Cmd.DeathCmd;
 import jp.yama2211.st.Cmd.HomeCmd;
 import jp.yama2211.st.Cmd.ReSpawnCmd;
 import jp.yama2211.st.Cmd.STCmd;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
 
     CustomFile config;
     public CustomFile home;
+    public CustomFile deathP;
 
     @Override
     public void onEnable() {
@@ -18,6 +21,8 @@ public final class Main extends JavaPlugin {
         saveDefaultConfig();
         home = new CustomFile(this,"home.yml");
         home.saveDefaultConfig();
+        deathP = new CustomFile(this,"deathP.yml");
+        deathP.saveDefaultConfig();
 
         //イベント
         EventListener eventListener = new EventListener(this);
@@ -45,5 +50,6 @@ public final class Main extends JavaPlugin {
             getCommand("st").setExecutor(new STCmd(this));
             getCommand("home").setExecutor(new HomeCmd(this));
             getCommand("respawn").setExecutor(new ReSpawnCmd(this));
+            getCommand("death").setExecutor(new DeathCmd(this));
         }
 }
