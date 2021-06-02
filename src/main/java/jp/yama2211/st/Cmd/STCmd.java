@@ -23,6 +23,9 @@ public class STCmd implements CommandExecutor {
                 sender.sendMessage(ChatColor.WHITE + "/st reload :" + ChatColor.GOLD + "configをリロードします。");
                 sender.sendMessage(ChatColor.WHITE + "/home :" + ChatColor.GREEN + "設定した場所にTPします。");
                 sender.sendMessage(ChatColor.WHITE + "/home set :" + ChatColor.GREEN + "現在座標をHomeに記録します。");
+                sender.sendMessage(ChatColor.WHITE + "/respawn :" + ChatColor.GREEN + "ベットなどのリスポーンポイントに" +
+                        "TPします。");
+                sender.sendMessage(ChatColor.WHITE + "/death :" + ChatColor.GREEN + "直前に死亡したポイントにTPします。");
 
                 return true;
             }
