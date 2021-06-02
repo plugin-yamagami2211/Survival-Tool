@@ -17,7 +17,8 @@
 /st reload : Configをリロードする  
 /home : 設定した場所にTPする。  
 /home set: 現在座標を記録する(home用)  
-/respawn : リスポーンポイントにTPする。
+/respawn : リスポーンポイントにTPする。  
+/death : 直前に死亡したポイントにTPする
 
 # thanks
 [複数のymlファイルを扱う](https://jyn.jp/bukkit-plugin-development-8/) @HimaJyun
