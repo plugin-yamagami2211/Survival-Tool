@@ -22,5 +22,5 @@ jobs:
       
     - uses: actions/upload-artifact@v2
       with:
-        name: zipの中にjarが入っています
+        name: jar-file-in-the-zip
         path: ./target/Survival-Tool-*-SNAPSHOT.jar
