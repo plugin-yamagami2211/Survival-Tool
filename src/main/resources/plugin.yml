@@ -14,11 +14,19 @@ commands:
     description: 現在の座標を記録します。
   respawn:
     description: ベットなどのスポーンポイントにTPします。
+  death:
+    description: 直前の死亡したポイントにTPします。
+  skull:
+    description: プレイヤーの頭を入手できます。
 
 permissions:
   home.use:
     default: true
   respawn.use:
+    default: true
+  skull.get:
+    default: true
+  death.use:
     default: true
   st.admin:
     default: op

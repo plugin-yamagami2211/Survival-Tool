@@ -1,9 +1,6 @@
 package jp.yama2211.st;
 
-import jp.yama2211.st.Cmd.DeathCmd;
-import jp.yama2211.st.Cmd.HomeCmd;
-import jp.yama2211.st.Cmd.ReSpawnCmd;
-import jp.yama2211.st.Cmd.STCmd;
+import jp.yama2211.st.Cmd.*;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -51,5 +48,5 @@ public final class Main extends JavaPlugin {
             getCommand("home").setExecutor(new HomeCmd(this));
             getCommand("respawn").setExecutor(new ReSpawnCmd(this));
             getCommand("death").setExecutor(new DeathCmd(this));
-        }
+            getCommand("skull").setExecutor(new SkullGetCmd(this));}
 }
