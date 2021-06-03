@@ -3,12 +3,7 @@
 
 name: Java CI with Maven
 
-env:
-  VERSION: ${project.version}
-
-on:
-  push:
-    branches: [ master ]
+on: [workflow_dispatch]
 
 jobs:
   build:
@@ -27,4 +22,5 @@ jobs:
       
     - uses: actions/upload-artifact@v2
       with:
+        name: zipの中にjarが入っています
         path: ./target/Survival-Tool-*-SNAPSHOT.jar
