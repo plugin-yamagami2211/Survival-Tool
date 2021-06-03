@@ -21,7 +21,7 @@
 /death : 直前に死亡したポイントにTPする
 
 # ビルド
-Actionを使って自動ビルドするようにしてみました。
+Actionを使って自動ビルドするようにしてみました。  
 [![Java CI with Maven](https://github.com/plugin-yamagami2211/Survival-Tool/actions/workflows/maven.yml/badge.svg)](https://github.com/plugin-yamagami2211/Survival-Tool/actions/workflows/maven.yml)  
 最新のビルドはAction->Java CI with Maven #(数字が一番大きいやつ)->Artifactsの jar-file-in-the-zip の中に入っています。  
 zipファイルの中にプラグインのjarが入っています。  
