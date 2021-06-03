@@ -3,6 +3,9 @@
 
 name: Java CI with Maven
 
+env:
+  VERSION: ${project.version}
+
 on:
   push:
     branches: [ master ]
@@ -24,4 +27,4 @@ jobs:
       
     - uses: actions/upload-artifact@v2
       with:
-        path: /home/runner/work/Survival-Tool/Survival-Tool/target/Survival-Tool-${project.version}.jar
+        path: ./target/Survival-Tool-*-SNAPSHOT.jar
