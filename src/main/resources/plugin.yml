@@ -30,3 +30,14 @@ permissions:
     default: true
   st.admin:
     default: op
+  st.ignore.chat:
+    default: op
+  st.ignore.blockbreak:
+    default: op
+  st.ignore.blockplace:
+    default op
+  st.ignore.*:
+    children:
+      st.ignore.chat: true
+      st.ignore.blockbreak: true
+      st.ignore.blockplace: true

@@ -59,32 +59,37 @@ public class EventListener implements Listener {
     }
 
     //権限のないプレイヤーに
-    /*
     @EventHandler
     public void onChat(AsyncPlayerChatEvent event){
-        Player player = event.getPlayer();
+        if(plugin.getConfig().getBoolean("Ignore")){
+            Player player = event.getPlayer();
 
-        if(!player.hasPermission("st.chat.ignore")){
-            event.setCancelled(true);
+            if(!player.hasPermission("st.chat.ignore")){
+                event.setCancelled(true);
+            }
         }
     }
 
     @EventHandler
     public void onNotBreak(BlockBreakEvent event){
-        Player player = event.getPlayer();
+        if(plugin.getConfig().getBoolean("Ignore")) {
+            Player player = event.getPlayer();
 
-        if(!player.hasPermission("st.blockbreak.ignore")) {
-            event.setCancelled(true);
+            if (!player.hasPermission("st.blockbreak.ignore")) {
+                event.setCancelled(true);
+            }
         }
     }
 
     @EventHandler
     public void onNotPut(BlockPlaceEvent event){
-        Player player = event.getPlayer();
+        if(plugin.getConfig().getBoolean("Ignore")) {
+            Player player = event.getPlayer();
 
-        if(!player.hasPermission("st.blockplace.ignere")){
-            event.setCancelled(true);
+            if (!player.hasPermission("st.blockplace.ignere")) {
+                event.setCancelled(true);
+            }
         }
     }
-*/
+
 }
