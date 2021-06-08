@@ -20,6 +20,18 @@
 /respawn : リスポーンポイントにTPする。  
 /death : 直前に死亡したポイントにTPする
 
+## 権限がないとできない系
+Permissionがないと次のことができなくなります。  
+(※最初からは使えないので**Configで有効**にする必要があります)
+- チャット禁止(st.ignore.chat)  
+- 破壊禁止(st.ignore.blockbreak)  
+- 設置禁止(st.ignore.blockplace)   
+- すべて(st.ignore.*)
+
+Permissionを管理するプラグインで()内の権限を与えてやると使えるようになります。  
+初めてログインしてから一定時間経ったら権限を付与するというようなやり方などにご利用ください。  
+(Permissionは増えたり、変わったり、なくなったりする可能性があります。)
+
 # ビルド
 Actionを使って自動ビルドするようにしてみました。  
 [![Java CI with Maven](https://github.com/plugin-yamagami2211/Survival-Tool/actions/workflows/maven.yml/badge.svg)](https://github.com/plugin-yamagami2211/Survival-Tool/actions/workflows/maven.yml)  
