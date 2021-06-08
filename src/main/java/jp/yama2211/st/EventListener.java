@@ -2,10 +2,15 @@ package jp.yama2211.st;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
@@ -53,4 +58,33 @@ public class EventListener implements Listener {
         plugin.deathP.getConfig().set(PlayerId + ".World", player.getLocation().getWorld().getName());
     }
 
+    //権限のないプレイヤーに
+    /*
+    @EventHandler
+    public void onChat(AsyncPlayerChatEvent event){
+        Player player = event.getPlayer();
+
+        if(!player.hasPermission("st.chat.ignore")){
+            event.setCancelled(true);
+        }
+    }
+
+    @EventHandler
+    public void onNotBreak(BlockBreakEvent event){
+        Player player = event.getPlayer();
+
+        if(!player.hasPermission("st.blockbreak.ignore")) {
+            event.setCancelled(true);
+        }
+    }
+
+    @EventHandler
+    public void onNotPut(BlockPlaceEvent event){
+        Player player = event.getPlayer();
+
+        if(!player.hasPermission("st.blockplace.ignere")){
+            event.setCancelled(true);
+        }
+    }
+*/
 }
