@@ -23,9 +23,14 @@
 ## 権限がないとできない系
 Permissionがないと次のことができなくなります。  
 (※最初からは使えないので**Configで有効**にする必要があります)
-- チャット禁止(st.ignore.chat)  
-- 破壊禁止(st.ignore.blockbreak)  
-- 設置禁止(st.ignore.blockplace)   
+- チャット(st.ignore.chat)  
+- 破壊(st.ignore.blockbreak)  
+- 設置(st.ignore.blockplace)
+- アイテムを拾う(st.ignore.itemdrop)
+- アイテムを捨てる(st.ignore.itempickup)
+- 矢を拾う(st.ignore.arrowpickup)
+- チェストを開ける(st.inventory.chest.ignore)
+- エンダーチェストを開ける(st.inventory.enderchest.ignore)
 - すべて(st.ignore.*)
 
 Permissionを管理するプラグインで()内の権限を与えてやると使えるようになります。  
