@@ -10,9 +10,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.inventory.InventoryOpenEvent;
+import org.bukkit.event.inventory.InventoryType;
+import org.bukkit.event.player.*;
+import org.bukkit.inventory.PlayerInventory;
 
 public class EventListener implements Listener {
     public Main plugin;
@@ -86,8 +87,70 @@ public class EventListener implements Listener {
         if(plugin.getConfig().getBoolean("Ignore")) {
             Player player = event.getPlayer();
 
-            if (!player.hasPermission("st.blockplace.ignere")) {
+            if (!player.hasPermission("st.blockplace.ignore")) {
                 event.setCancelled(true);
+            }
+        }
+    }
+
+    @EventHandler
+    public void onNotItemDrop(PlayerDropItemEvent event){
+        if(plugin.getConfig().getBoolean("Ignore")){
+            Player player = event.getPlayer();
+
+            if(!player.hasPermission("st.itemdrop.ignore")){
+                event.setCancelled(true);
+            }
+        }
+
+    }
+
+    @EventHandler
+    public void onNotItemPicup(PlayerPickupItemEvent event){
+        if(plugin.getConfig().getBoolean("Ignore")){
+            Player player = event.getPlayer();
+
+            if(!player.hasPermission("st.itempickup.ignore")){
+                event.setCancelled(true);
+            }
+        }
+    }
+
+    @EventHandler
+    public void onNotArrowPickup(PlayerPickupArrowEvent event){
+        if(plugin.getConfig().getBoolean("Ignore")){
+            Player player = event.getPlayer();
+
+            if(!player.hasPermission("st.arrowpickup.ignore")){
+                event.setCancelled(true);
+            }
+        }
+    }
+
+    //チェスト
+    @EventHandler
+    public void onNotInvChest(InventoryOpenEvent event){
+        if(plugin.getConfig().getBoolean("Ignore")){
+            if(event.getInventory().getType().equals(InventoryType.CHEST)){
+                Player player = (Player)event.getPlayer();
+
+                if(!player.hasPermission("st.inventory.chest.ignore")){
+                    event.setCancelled(true);
+                }
+            }
+        }
+    }
+
+    //エンダーチェスト
+    @EventHandler
+    public void onNotInvEnderChest(InventoryOpenEvent event){
+        if(plugin.getConfig().getBoolean("Ignore")){
+            if(event.getInventory().getType().equals(InventoryType.ENDER_CHEST)){
+                Player player = (Player)event.getPlayer();
+
+                if(!player.hasPermission("st.inventory.chest.ignore")){
+                    event.setCancelled(true);
+                }
             }
         }
     }
