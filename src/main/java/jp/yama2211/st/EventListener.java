@@ -65,7 +65,7 @@ public class EventListener implements Listener {
         if(plugin.getConfig().getBoolean("Ignore")){
             Player player = event.getPlayer();
 
-            if(!player.hasPermission("st.chat.ignore")){
+            if(!player.hasPermission("st.ignore.chat")){
                 event.setCancelled(true);
             }
         }
@@ -76,7 +76,7 @@ public class EventListener implements Listener {
         if(plugin.getConfig().getBoolean("Ignore")) {
             Player player = event.getPlayer();
 
-            if (!player.hasPermission("st.blockbreak.ignore")) {
+            if (!player.hasPermission("st.ignore.blockbreak")) {
                 event.setCancelled(true);
             }
         }
@@ -87,7 +87,7 @@ public class EventListener implements Listener {
         if(plugin.getConfig().getBoolean("Ignore")) {
             Player player = event.getPlayer();
 
-            if (!player.hasPermission("st.blockplace.ignore")) {
+            if (!player.hasPermission("st.ignore.blockplace")) {
                 event.setCancelled(true);
             }
         }
@@ -98,7 +98,7 @@ public class EventListener implements Listener {
         if(plugin.getConfig().getBoolean("Ignore")){
             Player player = event.getPlayer();
 
-            if(!player.hasPermission("st.itemdrop.ignore")){
+            if(!player.hasPermission("st.ignore.itemdrop")){
                 event.setCancelled(true);
             }
         }
@@ -110,7 +110,7 @@ public class EventListener implements Listener {
         if(plugin.getConfig().getBoolean("Ignore")){
             Player player = event.getPlayer();
 
-            if(!player.hasPermission("st.itempickup.ignore")){
+            if(!player.hasPermission("st.ignore.itempickup")){
                 event.setCancelled(true);
             }
         }
@@ -134,7 +134,7 @@ public class EventListener implements Listener {
             if(event.getInventory().getType().equals(InventoryType.CHEST)){
                 Player player = (Player)event.getPlayer();
 
-                if(!player.hasPermission("st.inventory.chest.ignore")){
+                if(!player.hasPermission("st.ignore.inventory.chest")){
                     event.setCancelled(true);
                 }
             }
@@ -148,7 +148,7 @@ public class EventListener implements Listener {
             if(event.getInventory().getType().equals(InventoryType.ENDER_CHEST)){
                 Player player = (Player)event.getPlayer();
 
-                if(!player.hasPermission("st.inventory.chest.ignore")){
+                if(!player.hasPermission("st.ignore.inventory.chest")){
                     event.setCancelled(true);
                 }
             }
