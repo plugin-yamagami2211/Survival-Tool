@@ -148,7 +148,7 @@ public class EventListener implements Listener {
             if(event.getInventory().getType().equals(InventoryType.ENDER_CHEST)){
                 Player player = (Player)event.getPlayer();
 
-                if(!player.hasPermission("st.ignore.inventory.chest")){
+                if(!player.hasPermission("st.ignore.inventory.enderchest")){
                     event.setCancelled(true);
                 }
             }
