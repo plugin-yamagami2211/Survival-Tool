@@ -36,8 +36,22 @@ permissions:
     default: op
   st.ignore.blockplace:
     default op
+  st.ignore.itemdrop:
+    default: op
+  st.ignore.itempickup:
+    default: op
+  st.arrowpickup.ignore:
+    default: op
+  st.ignore.inventory.chest:
+    default: op
+  st.ignore.inventory.enderchest:
+    default: op
   st.ignore.*:
     children:
       st.ignore.chat: true
       st.ignore.blockbreak: true
       st.ignore.blockplace: true
+      st.ignore.itemdrop: true
+      st.ignore.itempickup: true
+      st.ignore.inventory.chest: true
+      st.ignore.inventory.enderchest: true
