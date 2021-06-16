@@ -35,7 +35,7 @@ permissions:
   st.ignore.blockbreak:
     default: op
   st.ignore.blockplace:
-    default op
+    default: op
   st.ignore.itemdrop:
     default: op
   st.ignore.itempickup:
