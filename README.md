@@ -29,8 +29,8 @@ Permissionがないと次のことができなくなります。
 - アイテムを拾う(st.ignore.itemdrop)
 - アイテムを捨てる(st.ignore.itempickup)
 - 矢を拾う(st.ignore.arrowpickup)
-- チェストを開ける(st.inventory.chest.ignore)
-- エンダーチェストを開ける(st.inventory.enderchest.ignore)
+- チェストを開ける(st.ignore.inventory.chest)
+- エンダーチェストを開ける(st.ignore.inventory.enderchest)
 - すべて(st.ignore.*)
 
 Permissionを管理するプラグインで()内の権限を与えてやると使えるようになります。  
