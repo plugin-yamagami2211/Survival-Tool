@@ -48,5 +48,7 @@ public final class Main extends JavaPlugin {
             getCommand("home").setExecutor(new HomeCmd(this));
             getCommand("respawn").setExecutor(new ReSpawnCmd(this));
             getCommand("death").setExecutor(new DeathCmd(this));
-            getCommand("skull").setExecutor(new SkullGetCmd(this));}
+            getCommand("skull").setExecutor(new SkullGetCmd(this));
+            getCommand("inv").setExecutor(new OpenInvCmd(this));
+    }
 }

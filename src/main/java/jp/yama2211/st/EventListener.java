@@ -2,8 +2,6 @@ package jp.yama2211.st;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -13,7 +11,6 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryOpenEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.*;
-import org.bukkit.inventory.PlayerInventory;
 
 public class EventListener implements Listener {
     public Main plugin;
@@ -154,5 +151,7 @@ public class EventListener implements Listener {
             }
         }
     }
+
+
 
 }
