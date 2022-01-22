@@ -20,6 +20,8 @@ commands:
     description: プレイヤーの頭を入手できます。
   inv:
     description: プレイヤーのインベントリーを開きます。
+  ping:
+    description: Pingを確認するコマンドです。
 
 permissions:
   home.use:

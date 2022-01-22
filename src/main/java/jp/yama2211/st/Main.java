@@ -2,13 +2,19 @@ package jp.yama2211.st;
 
 import jp.yama2211.st.Cmd.*;
 
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 public final class Main extends JavaPlugin {
 
     CustomFile config;
     public CustomFile home;
     public CustomFile deathP;
+    private String ver;
 
     @Override
     public void onEnable() {
@@ -20,6 +26,9 @@ public final class Main extends JavaPlugin {
         home.saveDefaultConfig();
         deathP = new CustomFile(this,"deathP.yml");
         deathP.saveDefaultConfig();
+
+        ver = Bukkit.getServer().getClass().getPackage().getName();
+        ver = ver.substring(ver.lastIndexOf(".") + 1);
 
         //イベント
         EventListener eventListener = new EventListener(this);
@@ -50,5 +59,22 @@ public final class Main extends JavaPlugin {
             getCommand("death").setExecutor(new DeathCmd(this));
             getCommand("skull").setExecutor(new SkullGetCmd(this));
             getCommand("inv").setExecutor(new OpenInvCmd(this));
+            getCommand("ping").setExecutor(new PingCmd(this));
     }
+
+    public int getPing(Player player) {
+        int ping = -1;
+        try {
+            Class<?> cp = Class.forName("org.bukkit.craftbukkit."+ ver +".entity.CraftPlayer");
+            Object cpc = cp.cast(player);
+            Method m = cpc.getClass().getMethod("getHandle");
+            Object o = m.invoke(cpc);
+            Field f = o.getClass().getField("ping");
+            ping = f.getInt(o);
+        } catch (Exception e) {
+            Bukkit.getLogger().warning(e.getLocalizedMessage());
+        }
+        return ping;
+    }
+
 }

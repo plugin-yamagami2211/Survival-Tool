@@ -35,6 +35,12 @@ Death:
   tp: "&6死亡したポイントにTPしました"
   notp: "&4死亡したポイントが記録されていません。"
 
+#Msg は自分用
+#Msg2は他プレイヤを対象にした場合です。
+Ping:
+  Msg: "&6Ping: %Ping ms"
+  Msg2: "&6 %player の Ping: %Ping ms"
+
 plugin:
   reload: "&aConfigをリロードしました。"
   notpex: "&4権限がありません。"
