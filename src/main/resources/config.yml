@@ -20,7 +20,8 @@ Msg:
   FJoin: "&a&l%player &rが初めてログインしました。"
   Quit: "&a&l%player &rがログアウトしました。"
   Inv: "%playerのインベントリーを開きました。"
-  InvErr: "%player はオフラインです。"
+  Ender: "%playerのエンダーチェストを開きました。"
+  OfErr: "%player はオフラインです。"
 
 home:
   tp: "&6Homeに設定した場所にTPしました。"

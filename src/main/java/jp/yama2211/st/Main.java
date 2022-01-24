@@ -60,6 +60,7 @@ public final class Main extends JavaPlugin {
             getCommand("skull").setExecutor(new SkullGetCmd(this));
             getCommand("inv").setExecutor(new OpenInvCmd(this));
             getCommand("ping").setExecutor(new PingCmd(this));
+            getCommand("ender").setExecutor(new EnderCmd(this));
     }
 
     public int getPing(Player player) {

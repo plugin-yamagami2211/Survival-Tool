@@ -22,6 +22,8 @@ commands:
     description: プレイヤーのインベントリーを開きます。
   ping:
     description: Pingを確認するコマンドです。
+  ender:
+    description: プレイヤーのエンダーチェストを開きます。
 
 permissions:
   home.use:
@@ -35,7 +37,13 @@ permissions:
   st.admin:
     default: op
   st.openinv:
-    description: op
+    default: op
+  st.openender:
+    default: op
+  st.ping:
+    default: true
+  st.tping:
+    default: op
   st.ignore.chat:
     default: op
   st.ignore.blockbreak:

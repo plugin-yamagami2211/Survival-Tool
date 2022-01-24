@@ -34,7 +34,7 @@ public class OpenInvCmd  implements CommandExecutor {
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&', InvMsg));
                         return false;
                     } catch (Exception err){
-                        String ErrMsg = plugin.getConfig().getString("Msg"+".InvErr");
+                        String ErrMsg = plugin.getConfig().getString("Msg"+".OfErr");
                         ErrMsg = ErrMsg.replace("%player",args[0]);
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&',ErrMsg));
                     }

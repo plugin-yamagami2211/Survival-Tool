@@ -7,46 +7,39 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class PingCmd implements CommandExecutor {
+public class EnderCmd implements CommandExecutor {
     public Main plugin;
-    public PingCmd(Main plugin) {
+
+    public EnderCmd(Main plugin) {
         this.plugin = plugin;
     }
-
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!(sender instanceof Player)) {
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("plugin.notgame")));
             return true;
         } else {
-            if(args.length == 0){
-                if(sender.hasPermission("st.ping")){
-                    Player player = (Player)sender;
-                    String ping  = Integer.toString(plugin.getPing(player));
-                    String pingMsg = plugin.getConfig().getString("Ping"+".Msg");
-                    pingMsg = pingMsg.replace("%Ping" , ping);
-                    player.sendMessage(ChatColor.translateAlternateColorCodes('&',pingMsg));
+            if (sender.hasPermission("st.openender")) {
+                if(args.length == 0){
+                    sender.sendMessage("/ender <PlayerName>");
                     return false;
                 }
-            }
 
-            if(args.length == 1){
-                if(sender.hasPermission("st.tping")){
+                if(args.length == 1){
                     try{
                         Player player = (Player)sender;
                         Player tPlayer = player.getServer().getPlayer(args[0]);
-
-                        String ping  = Integer.toString(plugin.getPing(tPlayer));
-                        String pingMsg = plugin.getConfig().getString("Ping"+".Msg2");
-                        pingMsg = pingMsg.replace("%Ping" , ping);
-                        pingMsg = pingMsg.replace("%player",tPlayer.getName());
-                        player.sendMessage(ChatColor.translateAlternateColorCodes('&',pingMsg));
+                        player.openInventory(tPlayer.getEnderChest());
+                        String Msg = plugin.getConfig().getString("Msg"+".Ender");
+                        Msg = Msg.replace("%player",tPlayer.getName());
+                        player.sendMessage(ChatColor.translateAlternateColorCodes('&',Msg));
                         return false;
                     }catch (Exception e){
                         String ErrMsg = plugin.getConfig().getString("Msg"+".OfErr");
                         ErrMsg = ErrMsg.replace("%player",args[0]);
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&',ErrMsg));
                     }
+
                 }
             }
 
