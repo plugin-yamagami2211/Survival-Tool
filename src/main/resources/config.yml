@@ -42,6 +42,12 @@ Ping:
   Msg: "&6Ping: %Ping ms"
   Msg2: "&6 %player の Ping: %Ping ms"
 
+Gamemode:
+  Survival: "サバイバルに変更しました"
+  Creative: "クリエイティブに変更しました"
+  Adventure: "アドベンチャーに変更しました"
+  Spectator: "スペクテイターに変更しました"
+
 plugin:
   reload: "&aConfigをリロードしました。"
   notpex: "&4権限がありません。"

@@ -24,6 +24,8 @@ commands:
     description: Pingを確認するコマンドです。
   ender:
     description: プレイヤーのエンダーチェストを開きます。
+  gm:
+    description: ゲームモードを変更します。
 
 permissions:
   home.use:
@@ -44,6 +46,21 @@ permissions:
     default: true
   st.tping:
     default: op
+  st.gamemode.survival:
+    default: op
+  st.gamemode.creative:
+    default: op
+  st.gamemode.adventure:
+    default: op
+  st.gamemode.spectator:
+    default: op
+  st.gamemode.*:
+    default: op
+    children:
+      st.gamemode.survival: true
+      st.gamemode.creative: true
+      st.gamemode.adventure: true
+      st.gamemode.spectator: true
   st.ignore.chat:
     default: op
   st.ignore.blockbreak:

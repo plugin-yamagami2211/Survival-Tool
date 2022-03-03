@@ -61,6 +61,7 @@ public final class Main extends JavaPlugin {
             getCommand("inv").setExecutor(new OpenInvCmd(this));
             getCommand("ping").setExecutor(new PingCmd(this));
             getCommand("ender").setExecutor(new EnderCmd(this));
+            getCommand("gm").setExecutor(new GmChangeCmd(this));
     }
 
     public int getPing(Player player) {
