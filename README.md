@@ -13,15 +13,31 @@
 直前の死亡したポイントにTPします。
 
 ## コマンド
-/st : プラグインのヘルプコマンド  
-/st reload : Configをリロードする  
-/home : 設定した場所にTPする。  
-/home set: 現在座標を記録する(home用)  
-/respawn : リスポーンポイントにTPする。  
-/death : 直前に死亡したポイントにTPする  
-/inv <プレイヤー名> : プレイヤーのインベントリーを開く。  
-/ping (プレイヤー名) : pingを確認できます。またプレイヤー名を入力するとその人のpingを表示できます。  
-/ender <プレイヤー名> : プレイヤーのインベントリーを開く。
+`/st` : プラグインのヘルプコマンド  
+`/st reload` : Configをリロードする  
+`/home` : 設定した場所にTPする。  
+`/home set`: 現在座標を記録する(home用)  
+`/respawn` : リスポーンポイントにTPする。  
+`/death` : 直前に死亡したポイントにTPする  
+`/inv <プレイヤー名>` : プレイヤーのインベントリーを開く。  
+`/ping (プレイヤー名)` : pingを確認できます。またプレイヤー名を入力するとその人のpingを表示できます。  
+`/ender <プレイヤー名>` : プレイヤーのインベントリーを開く。  
+`/gm <0/s | 1/c | 2/a / 3/ss>` : ゲームモードを変更。
+
+## コマンドPex
+太字は誰でも使えるコマンドです。
+
+| cmd       | Pex                                                                                                                       | 
+|:----------|:--------------------------------------------------------------------------------------------------------------------------|
+| home      | **home.use**                                                                                                              | 
+| respawn   | **respawn.use**                                                                                                           |
+| death     | **death.use**                                                                                                             |
+| inv       | st.openinv                                                                                                                |
+| ping      | **st.ping**<br/>st.tping                                                                                                  |
+| ender     | st.openender                                                                                                              |
+| gm        | st.gamemode.* (全権限)<br/>st.gamemode.survival<br/>st.gamemode.creative<br/>st.gamemode.adventure<br/>st.gamemode.spectator |
+| skull     | **skull.get**                                                                                                             |
+| st reload | st.admin                                                                                                                  |
 
 ## 権限がないとできない系
 Permissionがないと次のことができなくなります。  
