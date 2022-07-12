@@ -54,6 +54,7 @@ public class EventListener implements Listener {
         plugin.deathP.getConfig().set(PlayerId + ".Yaw", player.getLocation().getYaw());
         plugin.deathP.getConfig().set(PlayerId + ".Pitch", player.getLocation().getPitch());
         plugin.deathP.getConfig().set(PlayerId + ".World", player.getLocation().getWorld().getName());
+        plugin.deathP.saveConfig();
     }
 
     //権限のないプレイヤーに
