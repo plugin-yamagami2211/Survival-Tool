@@ -39,6 +39,8 @@ public class OpenInvCmd  implements CommandExecutor {
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&',ErrMsg));
                     }
                 }
+            } else {
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
             }
         }
         return false;

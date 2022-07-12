@@ -30,7 +30,9 @@ public class ReSpawnCmd implements CommandExecutor {
             }catch (Exception err){
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("ReSpawn.notp")));
             }
-        }
+        } else {
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
+            }
         }
 
         return false;

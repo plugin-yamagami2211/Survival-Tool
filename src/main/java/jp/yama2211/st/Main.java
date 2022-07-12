@@ -14,6 +14,7 @@ public final class Main extends JavaPlugin {
     CustomFile config;
     public CustomFile home;
     public CustomFile deathP;
+    public CustomFile worldP;
     private String ver;
 
     @Override
@@ -26,6 +27,8 @@ public final class Main extends JavaPlugin {
         home.saveDefaultConfig();
         deathP = new CustomFile(this,"deathP.yml");
         deathP.saveDefaultConfig();
+        worldP = new CustomFile(this,"worldP.yml");
+        worldP.saveDefaultConfig();
 
         ver = Bukkit.getServer().getClass().getPackage().getName();
         ver = ver.substring(ver.lastIndexOf(".") + 1);
@@ -62,6 +65,7 @@ public final class Main extends JavaPlugin {
             getCommand("ping").setExecutor(new PingCmd(this));
             getCommand("ender").setExecutor(new EnderCmd(this));
             getCommand("gm").setExecutor(new GmChangeCmd(this));
+            getCommand("wtp").setExecutor(new WorldTeleportCmd(this));
     }
 
     public int getPing(Player player) {

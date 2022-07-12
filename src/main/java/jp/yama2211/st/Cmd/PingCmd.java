@@ -27,6 +27,8 @@ public class PingCmd implements CommandExecutor {
                     pingMsg = pingMsg.replace("%Ping" , ping);
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&',pingMsg));
                     return false;
+                } else {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
                 }
             }
 
@@ -47,6 +49,8 @@ public class PingCmd implements CommandExecutor {
                         ErrMsg = ErrMsg.replace("%player",args[0]);
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&',ErrMsg));
                     }
+                } else {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
                 }
             }
 

@@ -47,6 +47,8 @@ public class DeathCmd implements CommandExecutor {
                     {
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("Death.notp")));
                     }
+                } else {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
                 }
 
             }

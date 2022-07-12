@@ -35,6 +35,7 @@ public class GmChangeCmd implements CommandExecutor {
                     }
                 } else {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
+                    return false;
                 }
 
                 if(player.hasPermission("st.gamemode.creative")){
@@ -45,6 +46,7 @@ public class GmChangeCmd implements CommandExecutor {
                     }
                 } else {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
+                    return false;
                 }
 
                 if(player.hasPermission("st.gamemode.adventure")){
@@ -55,6 +57,7 @@ public class GmChangeCmd implements CommandExecutor {
                     }
                 } else {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
+                    return false;
                 }
 
                 if(player.hasPermission("st.gamemode.spectator")){
@@ -65,6 +68,7 @@ public class GmChangeCmd implements CommandExecutor {
                     }
                 } else {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
+                    return false;
                 }
             }
         }

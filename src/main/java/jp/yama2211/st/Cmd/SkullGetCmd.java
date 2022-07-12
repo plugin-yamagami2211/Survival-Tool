@@ -38,6 +38,8 @@ public class SkullGetCmd implements CommandExecutor {
                     player.sendMessage(ChatColor.GREEN + args[0] + "の頭を与えました。");
 
                 }
+            } else {
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
             }
         }
         return false;

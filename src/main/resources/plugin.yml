@@ -26,6 +26,12 @@ commands:
     description: プレイヤーのエンダーチェストを開きます。
   gm:
     description: ゲームモードを変更します。
+  wtp:
+    description: wtp
+  wtp.tp:
+    description: ワールドにテレポトします
+  wtp.set:
+    description: テレポトポーイントを設定します。
 
 permissions:
   home.use:

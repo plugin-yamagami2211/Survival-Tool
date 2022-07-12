@@ -41,6 +41,8 @@ public class EnderCmd implements CommandExecutor {
                     }
 
                 }
+            } else {
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
             }
 
         }
