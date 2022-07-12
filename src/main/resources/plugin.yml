@@ -32,6 +32,8 @@ commands:
     description: ワールドにテレポトします
   wtp.set:
     description: テレポトポーイントを設定します。
+  winfo:
+    description: winfo
 
 permissions:
   home.use:

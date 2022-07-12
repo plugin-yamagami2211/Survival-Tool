@@ -48,6 +48,23 @@ Gamemode:
   Adventure: "アドベンチャーに変更しました"
   Spectator: "スペクテイターに変更しました"
 
+#WorldInfo
+#%Name : ワールドの名前
+#SL : (ワールド)スポーンロケーション
+#%AllowAnimal : 動物が生成されるか
+#%AllowMonsters : モンスターを生成するか
+#%PvP : PvPが許可されているか
+#%Difficulty : 難易度
+#%n : 改行 / & : カラーコード
+WInfo:
+  msg: " --| WorldInformation |--%n
+  WorldName: %Name %n
+  SpawnLocation: %SL %n
+  AllowAnimal: %AllowAnimal %n
+  AllowMonsters: %AllowMonsters %n
+  PvP: %PvP %n
+  Difficulty: %Difficulty"
+
 plugin:
   reload: "&aConfigをリロードしました。"
   notpex: "&4権限がありません。"

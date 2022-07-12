@@ -66,6 +66,7 @@ public final class Main extends JavaPlugin {
             getCommand("ender").setExecutor(new EnderCmd(this));
             getCommand("gm").setExecutor(new GmChangeCmd(this));
             getCommand("wtp").setExecutor(new WorldTeleportCmd(this));
+            getCommand("winfo").setExecutor(new WorldInfoCmd(this));
     }
 
     public int getPing(Player player) {
