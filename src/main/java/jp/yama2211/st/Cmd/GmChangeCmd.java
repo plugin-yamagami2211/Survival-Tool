@@ -1,6 +1,7 @@
 package jp.yama2211.st.Cmd;
 
 import jp.yama2211.st.Main;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
@@ -22,7 +23,7 @@ public class GmChangeCmd implements CommandExecutor {
         } else {
             Player player = (Player)sender;
             if(args.length == 0){
-                player.sendMessage("/gm <0/s | 1/c | 2/a / 3/ss>");
+                player.sendMessage("/gm <0/s | 1/c | 2/a / 3/ss> [playername]");
                 return false;
             }
 
@@ -64,6 +65,53 @@ public class GmChangeCmd implements CommandExecutor {
                     if(args[0].equalsIgnoreCase("3") || args[0].equalsIgnoreCase("ss")){
                         player.setGameMode(GameMode.SPECTATOR);
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("Gamemode"+".Spectator")));
+                        return false;
+                    }
+                } else {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
+                    return false;
+                }
+            }
+
+            if(args.length == 2){
+                Player TargetPlayer = Bukkit.getPlayer(args[1]);
+                if(player.hasPermission("st.gamemode.survival")){
+                    if(args[0].equalsIgnoreCase("0") || args[0].equalsIgnoreCase("s")){
+                        TargetPlayer.setGameMode(GameMode.SURVIVAL);
+                        TargetPlayer.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("Gamemode"+".Survival")));
+                        return false;
+                    }
+                } else {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
+                    return false;
+                }
+
+                if(player.hasPermission("st.gamemode.creative")){
+                    if(args[0].equalsIgnoreCase("1") || args[0].equalsIgnoreCase("c")){
+                        TargetPlayer.setGameMode(GameMode.CREATIVE);
+                        TargetPlayer.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("Gamemode"+".Creative")));
+                        return false;
+                    }
+                } else {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
+                    return false;
+                }
+
+                if(player.hasPermission("st.gamemode.adventure")){
+                    if(args[0].equalsIgnoreCase("2") || args[0].equalsIgnoreCase("a")){
+                        TargetPlayer.setGameMode(GameMode.ADVENTURE);
+                        TargetPlayer.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("Gamemode"+".Adventure")));
+                        return false;
+                    }
+                } else {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("plugin.notpex")));
+                    return false;
+                }
+
+                if(player.hasPermission("st.gamemode.spectator")){
+                    if(args[0].equalsIgnoreCase("3") || args[0].equalsIgnoreCase("ss")){
+                        TargetPlayer.setGameMode(GameMode.SPECTATOR);
+                        TargetPlayer.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getConfig().getString("Gamemode"+".Spectator")));
                         return false;
                     }
                 } else {
