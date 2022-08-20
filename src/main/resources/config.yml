@@ -50,16 +50,23 @@ Gamemode:
 
 #WorldInfo
 #%Name : ワールドの名前
-#SL : (ワールド)スポーンロケーション
+#SLx : (ワールド)スポーンロケーションのX座標
+#SLy : (ワールド)スポーンロケーションのY座標
+#SLz : (ワールド)スポーンロケーションのZ座標
 #%AllowAnimal : 動物が生成されるか
 #%AllowMonsters : モンスターを生成するか
 #%PvP : PvPが許可されているか
 #%Difficulty : 難易度
+#%Ambient : Ambientのスポーン上限
+#%Animal : Animalのスポーン上限
+#%Monster : Monsterのスポーン上限
+#%MaxHeight : Y座標の最大値(高度上限)
+#%MinHeight : Y座標の最小値
 #%n : 改行 / & : カラーコード
 WInfo:
   msg: " --| WorldInformation |--%n
   WorldName: %Name %n
-  SpawnLocation: %SL %n
+  SpawnLocation: %SLx, %SLy, %SLz %n
   AllowAnimal: %AllowAnimal %n
   AllowMonsters: %AllowMonsters %n
   PvP: %PvP %n
