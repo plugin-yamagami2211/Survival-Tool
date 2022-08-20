@@ -39,6 +39,7 @@
 | gm        | st.gamemode.* (全権限)<br/>st.gamemode.survival<br/>st.gamemode.creative<br/>st.gamemode.adventure<br/>st.gamemode.spectator |
 | skull     | **skull.get**                                                                                                             |
 | wtp       | (現在Pexなし)                                                                                                                 |
+| winfo     | (現在Pexなし)                                                                                                                 |
 | st reload | st.admin                                                                                                                  |
 
 ## 権限がないとできない系
